@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prahva</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    body { background: #f4f7f9; color: #333; scroll-behavior: smooth; }
+    header { background: linear-gradient(90deg, #007991, #78ffd6); color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+    header h1 { font-size: 1.5rem; }
+    nav ul { display: flex; list-style: none; gap: 1.5rem; }
+    nav ul li a { text-decoration: none; color: #fff; font-weight: 500; }
+    nav ul li a:hover { text-decoration: underline; }
+    section { padding: 4rem 2rem; max-width: 1100px; margin: auto; }
+    .hero { text-align: center; padding: 5rem 2rem; background: linear-gradient(120deg, #89f7fe, #66a6ff); color: #fff; }
+    .hero h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .card { background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
+    .artisans, .craft-boxes, .about { background: #fff; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 2rem; }
+    .artisans h3, .craft-boxes h3, .about h3 { margin-bottom: 1rem; text-align: center; }
+    .artisan-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+    .artisan { padding: 1.5rem; border-radius: 10px; background: #f9f9f9; text-align: center; }
+    .box-options { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
+    .box { flex: 1; min-width: 250px; background: #f9f9f9; padding: 1.5rem; border-radius: 10px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    footer { background: #007991; color: #fff; text-align: center; padding: 1.5rem; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Prahva</h1>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#artisans">Artisans</a></li>
+        <li><a href="#craft-boxes">Craft Boxes</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero">
+    <h2>Every Purchase Preserves a Tradition</h2>
+    <p>Discover authentic Indian crafts directly from verified artisans. Each product comes with its maker's story.</p>
+  </section>
+
+  <section class="features">
+    <div class="card">✔ Verified Artisans<br><small>Every artisan is verified</small></div>
+    <div class="card">📖 Story-Rich Products<br><small>Every item has its story</small></div>
+    <div class="card">📦 Curated Boxes<br><small>Discover regional crafts</small></div>
+    <div class="card">🏆 Authenticity Guaranteed<br><small>Certified craftsmanship</small></div>
+  </section>
+
+  <section id="artisans" class="artisans">
+    <h3>Meet Our Verified Artisans</h3>
+    <div class="artisan-list">
+      <div class="artisan">
+        <h4>Meera Devi</h4>
+        <p>Bagru, Rajasthan</p>
+        <p><b>Block Printing</b></p>
+        <p>25+ years experience</p>
+      </div>
+      <div class="artisan">
+        <h4>Ravi Kumar</h4>
+        <p>Channapatna, Karnataka</p>
+        <p><b>Wooden Toys</b></p>
+        <p>15+ years experience</p>
+      </div>
+      <div class="artisan">
+        <h4>Priya Sharma</h4>
+        <p>Jaipur, Rajasthan</p>
+        <p><b>Blue Pottery</b></p>
+        <p>20+ years experience</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="craft-boxes" class="craft-boxes">
+    <h3>Monthly Craft Discovery Boxes</h3>
+    <div class="box-options">
+      <div class="box">
+        <h4>Mini Box</h4>
+        <p>1-2 handmade items</p>
+        <p><b>₹799/month</b></p>
+      </div>
+      <div class="box">
+        <h4>Standard Box</h4>
+        <p>3-4 handmade items</p>
+        <p><b>₹1499/month</b></p>
+      </div>
+      <div class="box">
+        <h4>Premium Box</h4>
+        <p>5-6 handmade items</p>
+        <p><b>₹2499/month</b></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h3>About Prahva</h3>
+    <p style="text-align:center; padding: 1rem 2rem;">Prahva is dedicated to preserving Indian cultural heritage by connecting skilled artisans with conscious buyers. Every purchase supports livelihoods and keeps traditional art forms alive.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Prahva. All rights reserved.</p>
+  </footer>
+</body>
+</html>
