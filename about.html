@@ -6,7 +6,7 @@
   <title>About Us - Prahva</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Extra styles for animations */
+    /* Fade-in */
     .fade-in {
       opacity: 0;
       transform: translateY(20px);
@@ -16,10 +16,75 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* Team */
+    .team-container {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 30px;
+      flex-wrap: nowrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .team-member {
+      flex: 1;
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+    .team-member img {
+      border-radius: 50%;
+      margin-bottom: 15px;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    /* Impact */
+    .impact-container {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 30px;
+      flex-wrap: nowrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .impact-card {
+      flex: 1;
+      background: #003b2d;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
     .impact-card h3 {
       font-size: 2.4rem;
       font-weight: bold;
       color: #00e6a8;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .team-container,
+      .impact-container {
+        flex-wrap: wrap;
+      }
+      .team-member,
+      .impact-card {
+        flex: 1 1 calc(50% - 20px); /* 2 per row */
+      }
+    }
+
+    @media (max-width: 500px) {
+      .team-member,
+      .impact-card {
+        flex: 1 1 100%; /* full width on very small screens */
+      }
     }
   </style>
 </head>
@@ -94,7 +159,7 @@
 
   <!-- Scripts -->
   <script>
-    // Fade-in effect when scrolling
+    // Fade-in
     const faders = document.querySelectorAll(".fade-in");
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -104,15 +169,13 @@
         }
       });
     }, { threshold: 0.2 });
-
     faders.forEach(fade => observer.observe(fade));
 
-    // Count-up animation for impact numbers
+    // Count-up
     function countUp(el) {
       const target = +el.getAttribute("data-target");
-      const duration = 2000; // ms
+      const duration = 2000;
       const increment = target / (duration / 30);
-
       let current = 0;
       const timer = setInterval(() => {
         current += increment;
@@ -124,7 +187,6 @@
         }
       }, 30);
     }
-
     const counters = document.querySelectorAll(".impact-card h3");
     const counterObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -134,7 +196,6 @@
         }
       });
     }, { threshold: 0.6 });
-
     counters.forEach(counter => counterObserver.observe(counter));
   </script>
 </body>
