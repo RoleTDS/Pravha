@@ -3,299 +3,135 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prahva — Your Cart</title>
+  <title>Prahva - Cart</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    body {
-      background: #fdf6ec;
-      color: #333;
-      line-height: 1.5;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-    header {
-      background: #5c4033;
-      color: #fff;
-      padding: 1rem 2rem;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    header h1 {
-      font-size: 2rem;
-    }
-    nav {
-      margin-top: 0.5rem;
-    }
-    nav a {
-      color: #fff;
-      margin-right: 1.5rem;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #c97b63;
+    .cart-container {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
-    .container {
-      max-width: 1100px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 0;
     }
 
-    h1.page-title {
-      color: #5c4033;
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    .cart-items {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 2rem;
-    }
-    .cart-items th, .cart-items td {
-      padding: 1rem;
-      border-bottom: 1px solid #e5dccf;
-      text-align: left;
-    }
-    .cart-items th {
-      background: #fff;
-      color: #5c4033;
-      font-weight: 600;
-    }
-    .item-image {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
+    .cart-item img {
+      width: 80px;
       border-radius: 8px;
     }
 
-    .quantity-control {
+    .cart-item-details {
+      flex: 1;
+      margin-left: 1rem;
+    }
+
+    .cart-item h3 {
+      margin-bottom: 0.3rem;
+      color: #8c3c2f;
+    }
+
+    .cart-actions {
       display: flex;
       align-items: center;
       gap: 0.5rem;
     }
-    .quantity-control button {
-      width: 30px;
-      height: 30px;
-      border: 1px solid #e5dccf;
-      background: #fff;
-      color: #5c4033;
-      font-size: 1.2rem;
-      cursor: pointer;
-      border-radius: 4px;
-      transition: background 0.2s;
-    }
-    .quantity-control button:hover {
-      background: #c97b63;
-      color: #fff;
-    }
-    .quantity-control input {
+
+    .cart-actions input {
       width: 50px;
-      text-align: center;
-      border: 1px solid #e5dccf;
-      border-radius: 4px;
       padding: 0.3rem;
-    }
-
-    .price-summary {
-      margin-top: 2rem;
-      padding: 1.5rem;
-      background: #fff;
-      border: 2px solid #e5dccf;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    }
-    .price-summary h2 {
-      color: #5c4033;
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
-    }
-    .price-summary .summary-row {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 0.8rem;
-    }
-    .price-summary .summary-row strong {
-      font-weight: 600;
-    }
-    .checkout-btn {
-      margin-top: 1.5rem;
-      width: 100%;
-      padding: 0.8rem;
-      background: #c97b63;
-      color: #fff;
-      border: none;
-      font-size: 1.1rem;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .checkout-btn:hover {
-      background: #8d9779;
-    }
-
-    .empty-cart {
       text-align: center;
-      padding: 4rem 2rem;
-      background: #fff;
-      border: 2px solid #e5dccf;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .checkout {
+      text-align: right;
       margin-top: 2rem;
     }
 
+    .checkout p {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
   </style>
 </head>
 <body>
+  <!-- Navbar -->
   <header>
-    <h1>Prahva</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="artisans.html">Artisans</a>
-      <a href="craft-boxes.html">Craft Boxes</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+    <nav class="navbar">
+      <div class="logo">Prahva</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="artisans.html">Artisans</a></li>
+        <li><a href="craft-boxes.html">Craft Boxes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cart.html" class="active">Cart</a></li>
+      </ul>
     </nav>
   </header>
 
-  <div class="container">
-    <h1 class="page-title">Your Cart</h1>
-
-    <!-- Cart items table -->
-    <table class="cart-items">
-      <thead>
-        <tr>
-          <th>Item</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Subtotal</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <div style="display:flex; align-items:center; gap:1rem;">
-              <img class="item-image" src="https://via.placeholder.com/100" alt="Hand-Block Scarf">
-              <div>
-                <div><strong>Hand-Block Printed Scarf</strong></div>
-                <div>Material: Cotton • Meera Devi</div>
-              </div>
-            </div>
-          </td>
-          <td>₹2,400</td>
-          <td>
-            <div class="quantity-control">
-              <button class="btn-dec">−</button>
-              <input type="number" value="1" min="1">
-              <button class="btn-inc">+</button>
-            </div>
-          </td>
-          <td>₹2,400</td>
-          <td><button style="background:transparent; border:none; color:#c97b63; cursor:pointer;">Remove</button></td>
-        </tr>
-
-        <tr>
-          <td>
-            <div style="display:flex; align-items:center; gap:1rem;">
-              <img class="item-image" src="https://via.placeholder.com/100" alt="Artisan Wooden Toy">
-              <div>
-                <div><strong>Artisan Wooden Toy</strong></div>
-                <div>Material: Wood • Ravi Kumar</div>
-              </div>
-            </div>
-          </td>
-          <td>₹1,800</td>
-          <td>
-            <div class="quantity-control">
-              <button class="btn-dec">−</button>
-              <input type="number" value="2" min="1">
-              <button class="btn-inc">+</button>
-            </div>
-          </td>
-          <td>₹3,600</td>
-          <td><button style="background:transparent; border:none; color:#c97b63; cursor:pointer;">Remove</button></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <!-- Price summary -->
-    <div class="price-summary">
-      <h2>Order Summary</h2>
-      <div class="summary-row">
-        <span>Subtotal</span>
-        <span>₹6,000</span>
-      </div>
-      <div class="summary-row">
-        <span>Shipping</span>
-        <span>₹150</span>
-      </div>
-      <div class="summary-row" style="font-size: 1.2rem;">
-        <strong>Total</strong>
-        <strong>₹6,150</strong>
-      </div>
-      <button class="checkout-btn">Proceed to Checkout</button>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Your Cart</h1>
+      <p>Review your selected items before checkout.</p>
     </div>
-  </div>
+  </section>
+
+  <!-- Cart Items -->
+  <section class="cart-container">
+    <div class="cart-item">
+      <img src="https://images.unsplash.com/photo-1606318314658-df7b1ef82b1a?auto=format&fit=crop&w=200&q=80" alt="Starter Box">
+      <div class="cart-item-details">
+        <h3>Starter Box</h3>
+        <p>₹1,499/month</p>
+      </div>
+      <div class="cart-actions">
+        <label for="qty1">Qty:</label>
+        <input type="number" id="qty1" value="1" min="1">
+      </div>
+    </div>
+
+    <div class="cart-item">
+      <img src="https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&w=200&q=80" alt="Heritage Box">
+      <div class="cart-item-details">
+        <h3>Heritage Box</h3>
+        <p>₹2,999/month</p>
+      </div>
+      <div class="cart-actions">
+        <label for="qty2">Qty:</label>
+        <input type="number" id="qty2" value="1" min="1">
+      </div>
+    </div>
+
+    <div class="cart-item">
+      <img src="https://images.unsplash.com/photo-1589308078050-47790e8e8c9f?auto=format&fit=crop&w=200&q=80" alt="Premium Box">
+      <div class="cart-item-details">
+        <h3>Premium Box</h3>
+        <p>₹4,999/month</p>
+      </div>
+      <div class="cart-actions">
+        <label for="qty3">Qty:</label>
+        <input type="number" id="qty3" value="1" min="1">
+      </div>
+    </div>
+
+    <div class="checkout">
+      <p><strong>Total: ₹9,497</strong></p>
+      <a href="#" class="btn">Proceed to Checkout</a>
+    </div>
+  </section>
 
   <footer>
-    <p style="text-align:center; padding:1rem 2rem; background:#5c4033; color:#fff;">&copy; 2025 Prahva. All Rights Reserved.</p>
+    <p>&copy; 2025 Prahva. All Rights Reserved.</p>
   </footer>
-
-  <script>
-    // JS for quantity buttons
-    document.querySelectorAll('.btn-inc').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const input = e.target.parentElement.querySelector('input');
-        input.value = parseInt(input.value) + 1;
-        updateRowSubtotal(e.target.closest('tr'));
-        updateSummary();
-      });
-    });
-    document.querySelectorAll('.btn-dec').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const input = e.target.parentElement.querySelector('input');
-        if (input.value > 1) {
-          input.value = parseInt(input.value) - 1;
-          updateRowSubtotal(e.target.closest('tr'));
-          updateSummary();
-        }
-      });
-    });
-
-    function updateRowSubtotal(row) {
-      const priceText = row.querySelector('td:nth-child(2)').innerText.replace('₹', '').replace(/,/g, '');
-      const qty = row.querySelector('input').value;
-      const subCell = row.querySelector('td:nth-child(4)');
-      const newSub = parseInt(priceText) * qty;
-      subCell.innerText = '₹' + newSub.toLocaleString();
-    }
-
-    function updateSummary() {
-      let sum = 0;
-      document.querySelectorAll('.cart-items tbody tr').forEach(row => {
-        const sub = row.querySelector('td:nth-child(4)').innerText.replace('₹','').replace(/,/g, '');
-        sum += parseInt(sub);
-      });
-      // You could update shipping calculation etc here
-      const shipping = 150; 
-      const total = sum + shipping;
-      const summary = document.querySelector('.price-summary');
-      summary.querySelector('.summary-row span:nth-child(2)').innerText = '₹' + sum.toLocaleString(); // subtotal
-      const totalRow = summary.querySelector('.summary-row strong:nth-child(2)');
-      totalRow.innerText = '₹' + total.toLocaleString();
-    }
-  </script>
-
 </body>
 </html>
