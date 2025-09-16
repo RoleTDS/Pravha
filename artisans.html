@@ -4,42 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prahva - Artisans</title>
-  <style>
-    body { background: #fdf6ec; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; }
-    header, footer { background: #5c4033; color: #fff; padding: 1rem 2rem; text-align: center; }
-    nav a { margin: 0 1rem; text-decoration: none; color: #fff; }
-    nav a:hover { color: #c97b63; }
-    .container { padding: 2rem; }
-    .artisan { background: #fff; border: 2px solid #e5dccf; margin-bottom: 2rem; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
-    .artisan h2 { color: #5c4033; }
-    .artisan p { margin-top: 0.5rem; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navbar -->
   <header>
-    <h1>Our Artisans</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="craft-boxes.html">Craft Boxes</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+    <nav class="navbar">
+      <div class="logo">Prahva</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="artisans.html" class="active">Artisans</a></li>
+        <li><a href="craft-boxes.html">Craft Boxes</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
     </nav>
   </header>
 
-  <div class="container">
-    <div class="artisan">
-      <h2>Aarav Sharma</h2>
-      <p>Master potter from Rajasthan, preserving the 400-year-old tradition of blue pottery.</p>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Meet Our Artisans</h1>
+      <p>Discover the inspiring stories of talented creators behind Prahva’s handcrafted collections.</p>
     </div>
-    <div class="artisan">
-      <h2>Meera Kapoor</h2>
-      <p>Weaver from Kutch, specializing in intricate embroidery inspired by desert motifs.</p>
+  </section>
+
+  <!-- Artisan Grid -->
+  <section class="highlights">
+    <div class="highlight-card">
+      <img src="https://images.unsplash.com/photo-1581090700227-4c4b2f1f6b68?auto=format&fit=crop&w=500&q=80" 
+           alt="Artisan 1" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+      <h2>Anaya - Weaver</h2>
+      <p>Specializes in handwoven textiles using traditional looms passed down through generations.</p>
     </div>
-    <div class="artisan">
-      <h2>Ravi Iyer</h2>
-      <p>Woodcraft artisan from Kerala, known for hand-carved traditional temple sculptures.</p>
+
+    <div class="highlight-card">
+      <img src="https://images.unsplash.com/photo-1556909211-36987aae3f92?auto=format&fit=crop&w=500&q=80" 
+           alt="Artisan 2" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+      <h2>Ravi - Potter</h2>
+      <p>Creates stunning clay pottery inspired by ancient Indian craftsmanship and modern design.</p>
     </div>
-  </div>
+
+    <div class="highlight-card">
+      <img src="https://images.unsplash.com/photo-1581092334714-2d82d7b32a04?auto=format&fit=crop&w=500&q=80" 
+           alt="Artisan 3" style="width:100%; border-radius:8px; margin-bottom:1rem;">
+      <h2>Lakshmi - Jewelry Maker</h2>
+      <p>Designs intricate handmade jewelry blending heritage techniques with contemporary flair.</p>
+    </div>
+  </section>
 
   <footer>
     <p>&copy; 2025 Prahva. All Rights Reserved.</p>
