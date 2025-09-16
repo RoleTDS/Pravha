@@ -1,69 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Prahva - Home</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-    body { background: #fdf6ec; color: #333; scroll-behavior: smooth; }
-    header { background: #5c4033; color: #fff; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
-    header h1 { font-size: 1.8rem; letter-spacing: 1px; }
-    nav ul { display: flex; list-style: none; gap: 1.5rem; }
-    nav ul li a { text-decoration: none; color: #fff; font-weight: 500; transition: color 0.3s; }
-    nav ul li a:hover { color: #c97b63; }
-    .hero { text-align: center; padding: 5rem 2rem; background: #eaddcf; color: #5c4033; }
-    .hero h2 { font-size: 2.8rem; margin-bottom: 1rem; }
-    .hero p { margin-bottom: 1.5rem; font-size: 1.2rem; }
-    .hero a { display: inline-block; background: #c97b63; color: #fff; padding: 0.8rem 1.5rem; border-radius: 25px; font-weight: 600; text-decoration: none; transition: background 0.3s, transform 0.2s; }
-    .hero a:hover { background: #8d9779; transform: translateY(-3px); }
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; padding: 3rem; }
-    .card { background: #fff; border: 2px solid #e5dccf; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.08); padding: 2rem; text-align: center; transition: transform 0.3s; }
-    .card:hover { transform: translateY(-8px); }
-    .card h3 { margin-bottom: 1rem; color: #5c4033; }
-    .card p { font-size: 0.95rem; color: #555; }
-    footer { background: #5c4033; color: #fff; text-align: center; padding: 1rem; margin-top: 3rem; }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Navbar -->
   <header>
-    <h1>Prahva</h1>
-    <nav>
-      <ul>
+    <nav class="navbar">
+      <div class="logo">Prahva</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="artisans.html">Artisans</a></li>
         <li><a href="craft-boxes.html">Craft Boxes</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">Cart</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Hero Section -->
   <section class="hero">
-    <h2>Discover the Art of Handcrafted Excellence</h2>
-    <p>Connecting artisans with the world through curated craft boxes and timeless designs.</p>
-    <a href="about.html">Learn More</a>
+    <div class="hero-content">
+      <h1>Celebrating Indian Craftsmanship</h1>
+      <p>Discover stories of artisans and get curated craft boxes delivered to your doorstep.</p>
+      <a href="craft-boxes.html" class="btn">Explore Craft Boxes</a>
+    </div>
   </section>
 
-  <section class="cards">
-    <div class="card">
-      <h3>Artisans</h3>
-      <p>Meet our talented artisans and explore their unique handcrafted creations.</p>
-      <a href="artisans.html">View Artisans</a>
+  <!-- Highlights -->
+  <section class="highlights">
+    <div class="highlight-card">
+      <h2>Meet Artisans</h2>
+      <p>Read about the journey of skilled artisans keeping traditions alive.</p>
     </div>
-    <div class="card">
-      <h3>Craft Boxes</h3>
-      <p>Experience handpicked craft boxes delivered to your doorstep.</p>
-      <a href="craft-boxes.html">View Boxes</a>
+    <div class="highlight-card">
+      <h2>Craft Subscriptions</h2>
+      <p>Handpicked boxes featuring regional crafts, delivered monthly.</p>
     </div>
-    <div class="card">
-      <h3>About Us</h3>
-      <p>Learn about Prahva’s mission to preserve heritage and promote artisans.</p>
-      <a href="about.html">About Prahva</a>
+    <div class="highlight-card">
+      <h2>Our Story</h2>
+      <p>Know why we started Prahva and our mission to support artisans.</p>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Prahva. All Rights Reserved.</p>
+    <p>© 2025 Prahva | Handcrafted with ❤️</p>
   </footer>
 </body>
 </html>
