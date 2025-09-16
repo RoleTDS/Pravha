@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prahva - Artisans</title>
+  <style>
+    body { background: #fdf6ec; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; }
+    header, footer { background: #5c4033; color: #fff; padding: 1rem 2rem; text-align: center; }
+    nav a { margin: 0 1rem; text-decoration: none; color: #fff; }
+    nav a:hover { color: #c97b63; }
+    .container { padding: 2rem; }
+    .artisan { background: #fff; border: 2px solid #e5dccf; margin-bottom: 2rem; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.08); }
+    .artisan h2 { color: #5c4033; }
+    .artisan p { margin-top: 0.5rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Our Artisans</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="craft-boxes.html">Craft Boxes</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="artisan">
+      <h2>Aarav Sharma</h2>
+      <p>Master potter from Rajasthan, preserving the 400-year-old tradition of blue pottery.</p>
+    </div>
+    <div class="artisan">
+      <h2>Meera Kapoor</h2>
+      <p>Weaver from Kutch, specializing in intricate embroidery inspired by desert motifs.</p>
+    </div>
+    <div class="artisan">
+      <h2>Ravi Iyer</h2>
+      <p>Woodcraft artisan from Kerala, known for hand-carved traditional temple sculptures.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Prahva. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
