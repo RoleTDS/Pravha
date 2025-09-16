@@ -94,51 +94,93 @@ header {
   background: #ffb86b;
 }
 
-.team, .impact {
+.team {
   text-align: center;
   padding: 60px 20px;
 }
 
-.team h2, .impact h2 {
+.team h2 {
   font-size: 2rem;
   margin-bottom: 40px;
-  color: #fff;
 }
 
-.team-cards, .impact-cards {
+.team-container {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+  gap: 40px;
+  flex-wrap: wrap; /* allows stacking on smaller screens */
 }
 
-.team-card, .impact-card {
-  background: #111;
-  border-radius: 12px;
+.team-member {
+  background: #1a1a1a;
   padding: 20px;
-  width: 220px;
+  border-radius: 12px;
+  width: 250px;
   text-align: center;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.4);
-  transition: transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
 }
 
-.team-card:hover, .impact-card:hover {
+.team-member:hover {
   transform: translateY(-5px);
 }
 
-.avatar {
-  font-size: 3rem;
+.team-member img {
+  border-radius: 50%;
   margin-bottom: 15px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.team-member h3 {
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* ---------------------- */
+/* Impact Section (About Us) */
+/* ---------------------- */
+.impact {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.impact h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.impact-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.impact-card {
+  background: #003b2d; /* dark green like screenshot */
+  padding: 30px;
+  border-radius: 12px;
+  width: 220px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .impact-card h3 {
-  color: #00d4a0;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  color: #00e6a8; /* glowing teal number */
+  margin-bottom: 10px;
 }
 
 .impact-card p {
-  color: #aaa;
-  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #ccc;
 }
 
 .highlights {
